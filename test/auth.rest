@@ -1,0 +1,52 @@
+POST http://localhost:5000/auth/postBusinessSignUp
+Content-Type: application/json
+
+{
+  "country": "latvia",
+  "businessName": "Rock Cafe",
+  "email": "rockcafe@gmail.com",
+  "password": "asdfghj",
+  "confirmPassword": "asdfghj",
+  "pushToken": "pushToken1234567"
+}
+
+###
+
+POST http://localhost:5000/auth/postBusinessSignIn
+Content-Type: application/json
+
+{
+  "email": "rockcafe@gmail.com",
+  "password": "asdfghj",
+  "pushToken": "pushToken123"
+}
+
+###
+
+POST http://localhost:5000/auth/getBusinessAccessToken
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDksImlhdCI6MTY0OTE5MTIzOH0.EZw3bzW2DYXnwcO2G3-cxh3GI73IVWNLg7Xl2qMQPUI"
+}
+
+###
+
+POST http://localhost:5000/auth/postBusinessPassword
+Content-Type: application/json
+
+{
+  "oldPassword": "asdfghj",
+  "newPassword": "123456",
+  "newConfirmPassword": "123456",
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDksImlhdCI6MTY0OTE5MDYzOH0._6hZwA-RX1YZ_6HUqoj_C9Mo9eETgGeVzptJixhl-m4"
+}
+
+###
+
+POST http://localhost:5000/auth/postBusinessLogOut
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzQsImlhdCI6MTY0ODcyMDE3OX0.fmiXKErZY8tJk8YVsDAPWL5R_mIRz87QB2AAMTOAb0E"
+}

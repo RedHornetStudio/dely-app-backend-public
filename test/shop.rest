@@ -1,0 +1,43 @@
+POST http://localhost:5000/getShops
+Content-Type: application/json
+
+{
+  "country": "latvia"
+}
+
+###
+
+POST http://localhost:5000/getFavoriteShops
+Content-Type: application/json
+
+{
+  "country": "latvia",
+  "favoriteShops": [1, 2]
+}
+
+###
+
+POST http://localhost:5000/getLocations
+Content-Type: application/json
+
+{
+  "shopId": 1
+}
+
+###
+
+POST http://localhost:5000/getProducts
+Content-Type: application/json
+
+{
+  "shopId": 1
+}
+
+###
+
+POST http://localhost:5000/getProductDetails
+Content-Type: application/json
+
+{
+  "productId": 1
+} 

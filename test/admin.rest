@@ -1,0 +1,41 @@
+POST http://localhost:5000/admin/getAdminShop
+Content-Type: application/json
+
+{
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDksImlhdCI6MTY0OTE5MjA2OCwiZXhwIjoxNjQ5MTkyNjY4fQ.q2GOfHXpE6Rad1hT8y_iYxNkhv0PZYuE2IRM4euEkf0"
+}
+
+###
+
+POST http://localhost:5000/admin/postEditShop
+Content-Type: application/json
+
+{
+  "country": "estonia",
+  "businessName": "Hard Rock Cafe",
+  "description": "A very good cafe with good rock",
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDksImlhdCI6MTY0OTE5MjA2OCwiZXhwIjoxNjQ5MTkyNjY4fQ.q2GOfHXpE6Rad1hT8y_iYxNkhv0PZYuE2IRM4euEkf0"
+}
+
+###
+
+POST http://localhost:5000/admin/postChangeOrderStatus
+Content-Type: application/json
+
+{
+  "accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjAsImlhdCI6MTY3NDE2NjkyMiwiZXhwIjoxNjc0MTY3NTIyfQ.dLGvayRx-kEIwAHWnpcaNP4cgDftmLU5m18SCaTGgv4",
+  "orderId":302,
+  "orderStatus":"closed"
+}
+
+###
+
+POST http://localhost:5000/admin/getOrders
+Content-Type: application/json
+
+{
+  "accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjAsImlhdCI6MTY3NDEyNTQ2NSwiZXhwIjoxNjc0MTI2MDY1fQ.aS0Nw17b8_zekwjD1WTtmMJV06UMY9uXwHUGaGyo0aw",
+  "locationId":18,
+  "filters":["preparing", "ready", "closed"],
+  "lastOrderGenerationTime":"2023-01-18T23:33:31.208Z"
+}

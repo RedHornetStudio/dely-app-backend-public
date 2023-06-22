@@ -1,0 +1,60 @@
+POST http://localhost:5000/postOrder
+Content-Type: application/json
+
+{
+  "order":
+    {
+      "locationId":18,
+      "currency":"€",
+      "totalPrice":"17.40",
+      "deliveryMethodDetails":{
+        "deliveryMethod":"inPlace",
+        "name":"Nome Sur",
+        "phoneNumber":"54781236",
+        "address":"",
+        "doorCode":""
+      },
+      "shoppingCartItems":[{
+        "id":1674058245693,
+        "productId":170,
+        "title":"Kebab in bread",
+        "price":"8.70",
+        "noteForKitchen":"",
+        "count":2,
+        "options":[
+          {
+            "title":"Sauce",
+            "selected":["Ketchup"]
+          },
+          {
+            "title":"Size",
+            "selected":["Medium"]
+          },
+          {
+            "title":"Additional",
+            "selected":["More sauce"]
+          }
+        ]
+      }],
+      "language":"en",
+      "pushToken":"ExponentPushToken[EN5zy5J2yr1eJzudgH1Fv6]"
+    }
+}
+
+###
+
+POST http://localhost:5000/postOrder
+Content-Type: application/json
+
+{"order":{"locationId":18,"currency":"€","totalPrice":"64.30","deliveryMethodDetails":{"deliveryMethod":"inPlace","name":"Tdyc","phoneNumber":"1235","address":"","doorCode":""},"shoppingCartItems":[{"id":1674070051397,"productId":170,"title":"Kebab in bread","price":"8.70","noteForKitchen":"","count":3,"options":[{"title":"Sauce","selected":["Ketchup","Maionaise"]},{"title":"Size","selected":["Medium"]},{"title":"Additional","selected":["More sauce"]}]},{"id":1674070061485,"productId":166,"title":"Kebab on plate","price":"5.80","noteForKitchen":"","count":4,"options":[{"title":"Meat","selected":["Mix"]},{"title":"Sauce","selected":["Ketchup","Curry","Maionaise"]}]},{"id":1674070064786,"productId":188,"title":"Milk soup","price":"15.00","noteForKitchen":"","count":1,"options":[]}],"language":"en","pushToken":"ExponentPushToken[EN5zy5J2yr1eJzudgH1Fv6]"}}
+
+###
+
+POST http://localhost:5000/admin/getOrders
+Content-Type: application/json
+
+{
+  "accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjAsImlhdCI6MTY3NDA2OTkyMywiZXhwIjoxNjc0MDcwNTIzfQ.ljPmnanaKdOS1G20x1jSjtZ1uZCumuRcbes7l_2-LPg",
+  "locationId":18,
+  "filters":["preparing","ready","closed"]
+}
